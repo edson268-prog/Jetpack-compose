@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material.icons.filled.Menu
@@ -62,6 +63,7 @@ fun App() {
                     0 -> HomeScreen()
                     1 -> ProfileScreen()
                     2 -> TestScreen()
+                    3 -> DialogScreen()
                 }
             }
         }
@@ -89,6 +91,10 @@ fun NavigationDrawer(
         NavigationItem(
             title = "Test",
             icon = Icons.Default.Face
+        ),
+        NavigationItem(
+            title = "Dialogs",
+            icon = Icons.Default.Info
         )
     )
 
