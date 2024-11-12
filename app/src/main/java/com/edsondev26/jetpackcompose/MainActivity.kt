@@ -14,6 +14,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Face
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Info
+import androidx.compose.material.icons.filled.List
 import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material.icons.filled.Person
 import androidx.compose.material.icons.filled.Star
@@ -39,8 +40,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import com.edsondev26.jetpackcompose.ui.paging.presentation.RickListScreen
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -86,6 +90,7 @@ fun App() {
                     2 -> TestScreen()
                     3 -> DialogScreen()
                     4 -> BoxConstraint()
+                    5 -> RickListScreen()
                 }
             }
         }
@@ -121,6 +126,10 @@ fun NavigationDrawer(
         NavigationItem(
             title = "ConstraintLayout",
             icon = Icons.Default.Star
+        ),
+        NavigationItem(
+            title = "Paging",
+            icon = Icons.Default.List
         )
     )
 

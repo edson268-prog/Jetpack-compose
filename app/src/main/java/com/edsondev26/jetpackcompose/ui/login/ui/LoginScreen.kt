@@ -27,6 +27,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.edsondev26.jetpackcompose.R
@@ -109,6 +110,7 @@ fun PasswordField(password: String, onTextFieldChanged: (String) -> Unit) {
         onValueChange = { onTextFieldChanged(it) },
         placeholder = { Text(text = "Contraseña") },
         keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Password),
+        visualTransformation = PasswordVisualTransformation('*'),
         singleLine = true,
         maxLines = 1,
         colors = TextFieldDefaults.colors(
